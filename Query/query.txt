@@ -1,0 +1,7 @@
+select  a.model_suffix, count(a.model_suffix) ITEM_COUNT
+from model_itens a inner join model b on(b.id = a.model_id)
+                         inner join organization c on(b.organization_id = c.ID)
+where (b.created_at >= (sysdate - 120)) and
+       c.org_code in('NW1','NW9') and      
+group by a.model_suffix,          
+order by count(a.model_suffix) DESC
