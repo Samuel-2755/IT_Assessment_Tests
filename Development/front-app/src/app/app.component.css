@@ -1,0 +1,10 @@
+header .top {
+    background-color: #ccc;
+    padding: 5px;
+}
+
+img.logo {
+    display: block;
+    margin: auto;
+    width: 44px;
+}
